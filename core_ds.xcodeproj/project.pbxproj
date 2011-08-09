@@ -6,8 +6,40 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1A31C5B913ED69F7006D9BAE /* MxFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5B813ED69F7006D9BAE /* MxFunctions.h */; };
+		1A31C5BB13ED6C6A006D9BAE /* MxFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */; };
+		1A31C5BD13ED7122006D9BAE /* MxDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5BC13ED7122006D9BAE /* MxDebug.h */; };
+		1A31C5BF13ED73F2006D9BAE /* MxDebug.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5BE13ED73F2006D9BAE /* MxDebug.c */; };
+		1A31C5C113ED7475006D9BAE /* MxStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5C013ED7475006D9BAE /* MxStatus.h */; };
+		1A31C5C313ED74E1006D9BAE /* MxStatus.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5C213ED74E1006D9BAE /* MxStatus.c */; };
+		1A31C5C513EDB4E6006D9BAE /* MxList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5C413EDB4E6006D9BAE /* MxList.h */; };
+		1A31C5C913EF2DD4006D9BAE /* MxList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5C813EF2DD4006D9BAE /* MxList.c */; };
+		1A31C5CB13F04F4B006D9BAE /* MxHashtable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5CA13F04F4B006D9BAE /* MxHashtable.h */; };
+		1A31C5CD13F08297006D9BAE /* MxHashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5CC13F08297006D9BAE /* MxHashtable.c */; };
+		1A31C5CF13F08452006D9BAE /* MxStringBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5CE13F08452006D9BAE /* MxStringBuffer.h */; };
+		1A31C5D113F1B89E006D9BAE /* MxStringBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5D013F1B89E006D9BAE /* MxStringBuffer.c */; };
+		1A31C5D313F1E001006D9BAE /* MxArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5D213F1E001006D9BAE /* MxArrayList.h */; };
+		1A31C5D513F1E071006D9BAE /* MxArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5D413F1E071006D9BAE /* MxArrayList.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1A31C5B113ED6807006D9BAE /* libcore_ds.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcore_ds.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A31C5B813ED69F7006D9BAE /* MxFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxFunctions.h; sourceTree = "<group>"; };
+		1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxFunctions.c; sourceTree = "<group>"; };
+		1A31C5BC13ED7122006D9BAE /* MxDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxDebug.h; sourceTree = "<group>"; };
+		1A31C5BE13ED73F2006D9BAE /* MxDebug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxDebug.c; sourceTree = "<group>"; };
+		1A31C5C013ED7475006D9BAE /* MxStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxStatus.h; sourceTree = "<group>"; };
+		1A31C5C213ED74E1006D9BAE /* MxStatus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxStatus.c; sourceTree = "<group>"; };
+		1A31C5C413EDB4E6006D9BAE /* MxList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxList.h; sourceTree = "<group>"; };
+		1A31C5C813EF2DD4006D9BAE /* MxList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxList.c; sourceTree = "<group>"; };
+		1A31C5CA13F04F4B006D9BAE /* MxHashtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxHashtable.h; sourceTree = "<group>"; };
+		1A31C5CC13F08297006D9BAE /* MxHashtable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxHashtable.c; sourceTree = "<group>"; };
+		1A31C5CE13F08452006D9BAE /* MxStringBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxStringBuffer.h; sourceTree = "<group>"; };
+		1A31C5D013F1B89E006D9BAE /* MxStringBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxStringBuffer.c; sourceTree = "<group>"; };
+		1A31C5D213F1E001006D9BAE /* MxArrayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxArrayList.h; sourceTree = "<group>"; };
+		1A31C5D413F1E071006D9BAE /* MxArrayList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxArrayList.c; sourceTree = "<group>"; };
+		1A31C5D613F1E678006D9BAE /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +56,21 @@
 		1A31C5A613ED6807006D9BAE = {
 			isa = PBXGroup;
 			children = (
+				1A31C5D613F1E678006D9BAE /* Readme.txt */,
+				1A31C5B813ED69F7006D9BAE /* MxFunctions.h */,
+				1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */,
+				1A31C5BC13ED7122006D9BAE /* MxDebug.h */,
+				1A31C5BE13ED73F2006D9BAE /* MxDebug.c */,
+				1A31C5C013ED7475006D9BAE /* MxStatus.h */,
+				1A31C5C213ED74E1006D9BAE /* MxStatus.c */,
+				1A31C5C413EDB4E6006D9BAE /* MxList.h */,
+				1A31C5C813EF2DD4006D9BAE /* MxList.c */,
+				1A31C5CA13F04F4B006D9BAE /* MxHashtable.h */,
+				1A31C5CC13F08297006D9BAE /* MxHashtable.c */,
+				1A31C5CE13F08452006D9BAE /* MxStringBuffer.h */,
+				1A31C5D013F1B89E006D9BAE /* MxStringBuffer.c */,
+				1A31C5D213F1E001006D9BAE /* MxArrayList.h */,
+				1A31C5D413F1E071006D9BAE /* MxArrayList.c */,
 				1A31C5B213ED6807006D9BAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +90,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A31C5B913ED69F7006D9BAE /* MxFunctions.h in Headers */,
+				1A31C5BD13ED7122006D9BAE /* MxDebug.h in Headers */,
+				1A31C5C113ED7475006D9BAE /* MxStatus.h in Headers */,
+				1A31C5C513EDB4E6006D9BAE /* MxList.h in Headers */,
+				1A31C5CB13F04F4B006D9BAE /* MxHashtable.h in Headers */,
+				1A31C5CF13F08452006D9BAE /* MxStringBuffer.h in Headers */,
+				1A31C5D313F1E001006D9BAE /* MxArrayList.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +147,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A31C5BB13ED6C6A006D9BAE /* MxFunctions.c in Sources */,
+				1A31C5BF13ED73F2006D9BAE /* MxDebug.c in Sources */,
+				1A31C5C313ED74E1006D9BAE /* MxStatus.c in Sources */,
+				1A31C5C913EF2DD4006D9BAE /* MxList.c in Sources */,
+				1A31C5CD13F08297006D9BAE /* MxHashtable.c in Sources */,
+				1A31C5D113F1B89E006D9BAE /* MxStringBuffer.c in Sources */,
+				1A31C5D513F1E071006D9BAE /* MxArrayList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

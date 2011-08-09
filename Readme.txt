@@ -1,0 +1,1 @@
+Simple C data structures library. No pseudo object model. No event loop. No flying car.
