@@ -15,6 +15,7 @@
 
 #include "MxArrayList.h"
 
+
 // expand the internal array
 static inline MxStatus ExpandIfNeeded(MxArrayListRef list)
 {
@@ -36,6 +37,7 @@ static inline MxStatus ExpandIfNeeded(MxArrayListRef list)
 }
 
 
+
 MxArrayListRef MxArrayListCreate(void)
 {
 	MxArrayListRef result = malloc(sizeof(MxArrayList));
@@ -51,6 +53,7 @@ MxArrayListRef MxArrayListCreate(void)
 	
 	return result;
 }
+
 
 MxArrayListRef MxArrayListCreateWithCapacity(size_t capacity)
 {
@@ -125,7 +128,7 @@ MxStatus MxArrayListInitWithCapacityAndFunctions(MxArrayListRef list, size_t cap
 	if (list == NULL)
 		return MxStatusNullArgument;
 	
-	if (capacity <= 0)
+	if (capacity == 0)
 		return MxStatusIllegalArgument;
 	
 	
@@ -145,7 +148,7 @@ MxStatus MxArrayListInitWithCapacityAndFunctions(MxArrayListRef list, size_t cap
 
 MxStatus MxArrayListWipe(MxArrayListRef list)
 {
-	if (list	 == NULL)
+	if (list == NULL)
 		return MxStatusNullArgument;
 	
 	MxStatus result = MxArrayListClear(list);
@@ -170,7 +173,7 @@ MxStatus MxArrayListDelete(MxArrayListRef list)
 
 MxStatus MxArrayListAppend(MxArrayListRef list, const void *item)
 {
-	if (list	 == NULL)
+	if (list == NULL)
 		return MxStatusNullArgument;
 	
 	MxStatus result = ExpandIfNeeded(list);
@@ -183,6 +186,8 @@ MxStatus MxArrayListAppend(MxArrayListRef list, const void *item)
 	
 	return MxStatusOK;
 }
+
+
 
 MxStatus MxArrayListPush(MxArrayListRef list, const void *item)
 {
@@ -199,6 +204,8 @@ MxStatus MxArrayListPush(MxArrayListRef list, const void *item)
 	
 	return MxStatusOK;
 }
+
+
 
 MxStatus MxArrayListInsertAt(MxArrayListRef list, const void *item, int index)
 {
@@ -223,6 +230,7 @@ MxStatus MxArrayListInsertAt(MxArrayListRef list, const void *item, int index)
 	
 	return MxStatusOK;
 }
+
 
 
 MxStatus MxArrayListReplaceAt(MxArrayListRef list, const void *item, int index)
@@ -265,6 +273,7 @@ MxStatus MxArrayListItemAt(MxArrayListRef list, int index, void **result)
 }
 
 
+
 MxStatus MxArrayListPop(MxArrayListRef list, void **result)
 {
 	if (list == NULL || result == NULL)
@@ -282,6 +291,7 @@ MxStatus MxArrayListPop(MxArrayListRef list, void **result)
 	
 	return MxStatusOK;
 }
+
 
 
 MxStatus MxArrayListRemoveAt(MxArrayListRef list, int index, void **removed)
@@ -313,6 +323,7 @@ MxStatus MxArrayListRemoveAt(MxArrayListRef list, int index, void **removed)
 }
 
 
+
 MxStatus MxArrayListClear(MxArrayListRef list)
 {
 	if (list == NULL)
@@ -334,6 +345,8 @@ MxStatus MxArrayListClear(MxArrayListRef list)
 	return MxStatusOK;
 }
 
+
+
 MxStatus MxArrayListIterate(MxArrayListRef list, MxIteratorCallback callback, void *state)
 {
 	if (list == NULL || callback == NULL)
@@ -346,6 +359,8 @@ MxStatus MxArrayListIterate(MxArrayListRef list, MxIteratorCallback callback, vo
 	
 	return result;
 }
+
+
 
 MxStatus MxArrayListIterateBackward(MxArrayListRef list, MxIteratorCallback callback, void *state)
 {
@@ -364,6 +379,7 @@ MxStatus MxArrayListIterateBackward(MxArrayListRef list, MxIteratorCallback call
 }
 
 
+
 inline void *MxArrayListGetItem(MxArrayListRef list, int idx)
 {
 	if (list && idx > 0 && idx < list->count)
@@ -373,10 +389,11 @@ inline void *MxArrayListGetItem(MxArrayListRef list, int idx)
 }
 
 
+
 inline size_t MxArrayListGetCount(MxArrayListRef list)
 {
-	if (list	)
+	if (list != NULL)
 		return list->count;
 	
-	return -1;
+	return 0;
 }

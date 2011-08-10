@@ -21,6 +21,8 @@
 		1A31C5D113F1B89E006D9BAE /* MxStringBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5D013F1B89E006D9BAE /* MxStringBuffer.c */; };
 		1A31C5D313F1E001006D9BAE /* MxArrayList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5D213F1E001006D9BAE /* MxArrayList.h */; };
 		1A31C5D513F1E071006D9BAE /* MxArrayList.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5D413F1E071006D9BAE /* MxArrayList.c */; };
+		1A31C5D813F32E51006D9BAE /* MxBinaryTree.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5D713F32E51006D9BAE /* MxBinaryTree.h */; };
+		1A31C5DD13F32F35006D9BAE /* MxBinaryTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5DC13F32F35006D9BAE /* MxBinaryTree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		1A31C5D213F1E001006D9BAE /* MxArrayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxArrayList.h; sourceTree = "<group>"; };
 		1A31C5D413F1E071006D9BAE /* MxArrayList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxArrayList.c; sourceTree = "<group>"; };
 		1A31C5D613F1E678006D9BAE /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		1A31C5D713F32E51006D9BAE /* MxBinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxBinaryTree.h; sourceTree = "<group>"; };
+		1A31C5DC13F32F35006D9BAE /* MxBinaryTree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxBinaryTree.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				1A31C5D013F1B89E006D9BAE /* MxStringBuffer.c */,
 				1A31C5D213F1E001006D9BAE /* MxArrayList.h */,
 				1A31C5D413F1E071006D9BAE /* MxArrayList.c */,
+				1A31C5D713F32E51006D9BAE /* MxBinaryTree.h */,
+				1A31C5DC13F32F35006D9BAE /* MxBinaryTree.c */,
 				1A31C5B213ED6807006D9BAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +103,7 @@
 				1A31C5CB13F04F4B006D9BAE /* MxHashtable.h in Headers */,
 				1A31C5CF13F08452006D9BAE /* MxStringBuffer.h in Headers */,
 				1A31C5D313F1E001006D9BAE /* MxArrayList.h in Headers */,
+				1A31C5D813F32E51006D9BAE /* MxBinaryTree.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +161,7 @@
 				1A31C5CD13F08297006D9BAE /* MxHashtable.c in Sources */,
 				1A31C5D113F1B89E006D9BAE /* MxStringBuffer.c in Sources */,
 				1A31C5D513F1E071006D9BAE /* MxArrayList.c in Sources */,
+				1A31C5DD13F32F35006D9BAE /* MxBinaryTree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +248,7 @@
 				1A31C5B713ED6807006D9BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

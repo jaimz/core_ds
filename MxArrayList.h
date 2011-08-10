@@ -30,7 +30,7 @@ typedef struct _MxArrayList {
 
 
 MxArrayListRef MxArrayListCreate(void);
-MxArrayListRef	MxArrayListCreateWithFunctions(MxFreeFunction itemFree, MxEqualsFunction itemEquals);
+MxArrayListRef MxArrayListCreateWithFunctions(MxFreeFunction itemFree, MxEqualsFunction itemEquals);
 MxArrayListRef MxArrayListCreateWithCapacity(size_t capacity);
 MxArrayListRef MxArrayListCreateWithCapacityAndFunctions(size_t capacity, MxFreeFunction itemFree, MxEqualsFunction itemEquals);
 
