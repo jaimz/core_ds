@@ -78,7 +78,6 @@
 		1A31C61F13F400E5006D9BAE /* test_harness */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_harness; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A31C62413F400E5006D9BAE /* test_harness.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = test_harness.1; sourceTree = "<group>"; };
 		1A31C62B13F40143006D9BAE /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = SOURCE_ROOT; };
-		1A31C62C13F40143006D9BAE /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = SOURCE_ROOT; };
 		1A31C62E13F40160006D9BAE /* test_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_list.h; sourceTree = "<group>"; };
 		1A31C62F13F401A6006D9BAE /* test_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_list.c; sourceTree = "<group>"; };
 		1A31C63113F402E5006D9BAE /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		1A31C63813F47930006D9BAE /* test_buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_buffer.c; sourceTree = "<group>"; };
 		1A31C63A13F48203006D9BAE /* test_array_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_array_list.h; sourceTree = "<group>"; };
 		1A31C63B13F485EE006D9BAE /* test_array_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_array_list.c; sourceTree = "<group>"; };
+		1A31C63D13F48D87006D9BAE /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				1A31C62B13F40143006D9BAE /* utils.c */,
-				1A31C62C13F40143006D9BAE /* utils.h */,
+				1A31C63D13F48D87006D9BAE /* utils.h */,
 				1A31C63113F402E5006D9BAE /* main.c */,
 				1A31C63A13F48203006D9BAE /* test_array_list.h */,
 				1A31C63B13F485EE006D9BAE /* test_array_list.c */,
