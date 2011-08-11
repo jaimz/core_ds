@@ -413,19 +413,20 @@ MxStatus MxListPop(MxListRef list, void **result)
 	return MxStatusOK;
 }
 
-int MxListIterateForward(MxListRef list, MxIteratorCallback callback, void *state) {
+MxStatus MxListIterateForward(MxListRef list, MxIteratorCallback callback, void *state) {
 	MxListNodeRef curr;
 	int result;
     
 	if (list == NULL)
 		return MxStatusNullArgument;
+    
 	if (list->sentinel == NULL)
 		return MxStatusBadArgument;
     
 	curr = list->sentinel->next;
     
-	result = 0;
-	while (result == 0 && curr != list->sentinel) {
+	result = MxStatusOK;
+	while (result == MxStatusOK && curr != list->sentinel) {
 		result = callback(curr->data, state);
 		curr = curr->next;
 	}
@@ -433,9 +434,9 @@ int MxListIterateForward(MxListRef list, MxIteratorCallback callback, void *stat
 	return result;
 }
 
-int MxListIterateBackward(MxListRef list, MxIteratorCallback callback, void *state) {
+MxStatus MxListIterateBackward(MxListRef list, MxIteratorCallback callback, void *state) {
 	MxListNodeRef curr;
-	int result;
+	MxStatus result;
     
 	if (list == NULL)
 		return MxStatusNullArgument;
@@ -445,8 +446,8 @@ int MxListIterateBackward(MxListRef list, MxIteratorCallback callback, void *sta
     
 	curr = list->sentinel->next;
     
-	result = 0;
-	while (result == 0 && curr != list->sentinel) {
+	result = MxStatusOK;
+	while (result == MxStatusOK && curr != list->sentinel) {
 		result = callback(curr->data, state);
 		curr = curr->prev;
 	}

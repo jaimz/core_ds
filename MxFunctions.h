@@ -8,9 +8,11 @@
 #ifndef core_ds_MxFunctions_h
 #define core_ds_MxFunctions_h
 
+#include "MxStatus.h"
+
 // Iteration callback function. The iteration should terminate if
-// this returns anything other than 0
-typedef int (*MxIteratorCallback)(const void *data, void *state);
+// this returns anything other than MxStatusOK
+typedef MxStatus (*MxIteratorCallback)(const void *data, void *state);
 
 
 // Order two values. Implementation should return:

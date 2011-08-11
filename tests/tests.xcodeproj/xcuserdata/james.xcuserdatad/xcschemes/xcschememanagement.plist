@@ -4,30 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>core_ds.xcscheme</key>
+		<key>tests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>test_harness.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A31C5B013ED6807006D9BAE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1A31C5E313F3335F006D9BAE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1A31C61E13F400E5006D9BAE</key>
+		<key>1A31C5FE13F3FCDB006D9BAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -21,6 +21,7 @@ static MxPairRef CreatePair(const void *key, const void *value);
 static void RemoveListNode(MxListNodeRef node);
 static inline void ReplaceValueInPair(MxHashtableRef table, MxPairRef pair, const void *newValue);
 static MxStatus PutInBucket(MxHashtableRef table, MxListRef bucket, const void *key, const void *value);
+static inline MxListRef BucketForKey(MxHashtableRef table, const void *key);
 
 MxHashtableRef MxHashtableCreate(void) {
 	MxHashtableRef table = (MxHashtableRef)malloc(sizeof(MxHashtable));
@@ -205,6 +206,13 @@ static MxStatus DestroyEntry(const void *vpair, void *vtable)
 }
 
 
+inline static MxListRef BucketForKey(MxHashtableRef table, const void *key)
+{
+    unsigned long hash = table->hashFunction(key);
+    unsigned int bucketIdx = (unsigned int)(hash % table->bucketCount);
+    
+    return (table->buckets + bucketIdx);
+}
 
 static MxStatus PutInBucket(MxHashtableRef table, MxListRef bucket, const void *key, const void *value)
 {
@@ -263,11 +271,12 @@ MxStatus MxHashtablePut(MxHashtableRef table, const void *key, const void *value
 	if (table->hashFunction == NULL)
 		return MxStatusInvalidStructure;
     
-	unsigned long hash = table->hashFunction(key);
-	unsigned int bucketIdx = (unsigned int)(hash % ((unsigned long)table->bucketCount));
+//	unsigned long hash = table->hashFunction(key);
+//	unsigned int bucketIdx = (unsigned int)(hash % ((unsigned long)table->bucketCount));
     
-	MxListRef bucket = (MxListRef)table->buckets + bucketIdx;
+//	MxListRef bucket = (MxListRef)table->buckets + bucketIdx;
     
+    MxListRef bucket = BucketForKey(table, key);
 	MxStatus result = PutInBucket(table, bucket, key, value);
 	
 	return result;
@@ -349,10 +358,12 @@ MxStatus MxHashtableGet(MxHashtableRef table, const void *key, void **result)
 	
 	if (table->count > 0)
 	{
-		unsigned long hash = table->hashFunction(key);
-		unsigned int bucketIdx = (unsigned int)hash % table->bucketCount;
-		
-		MxListRef bucket = table->buckets + bucketIdx;
+		//unsigned long hash = table->hashFunction(key);
+		//unsigned int bucketIdx = (unsigned int)(hash % table->bucketCount);
+        //		MxListRef bucket = table->buckets + bucketIdx;
+        
+        
+        MxListRef bucket = BucketForKey(table, key);
 		MxListNodeRef node = bucket->sentinel->next;
 		
 		MxPairRef pair = NULL;
@@ -386,11 +397,12 @@ MxStatus MxHashtableRemove(MxHashtableRef table, const void *key)
 	int found = 0;
 	if (table->count > 0)
 	{
-		unsigned long hash = table->hashFunction(key);
-		unsigned int bucketIdx = (unsigned int)hash % table->bucketCount;
-		
-		MxListRef bucket = table->buckets + bucketIdx;
-		MxListNodeRef node = bucket->sentinel->next;
+		//unsigned long hash = table->hashFunction(key);
+		//unsigned int bucketIdx = (unsigned int)(hash % table->bucketCount);
+		//MxListRef bucket = table->buckets + bucketIdx;
+
+        MxListRef bucket = BucketForKey(table, key);
+        MxListNodeRef node = bucket->sentinel->next;
 		
 		MxPairRef pair = NULL;
 		while (node != bucket->sentinel) {
@@ -434,10 +446,11 @@ MxStatus MxHashtableTake(MxHashtableRef table, const void *key, void **result)
 	
 	if (table->count > 0)
 	{
-		unsigned long hash = table->hashFunction(key);
-		unsigned int bucketIdx = (unsigned int)hash % table->bucketCount;
-		
-		MxListRef bucket = table->buckets + bucketIdx;
+		//unsigned long hash = table->hashFunction(key);
+		//unsigned int bucketIdx = (unsigned int)(hash % table->bucketCount);
+		//MxListRef bucket = table->buckets + bucketIdx;
+        
+        MxListRef bucket = BucketForKey(table, key);
 		MxListNodeRef node = bucket->sentinel->next;
 		
 		MxPairRef pair = NULL;

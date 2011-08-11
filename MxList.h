@@ -92,7 +92,7 @@ MxStatus MxListIterateBackward(MxListRef list, MxIteratorCallback callback, void
 /// Iterate through the list, removing nodes for which the callback returns non-zero
 MxStatus MxListFilter(MxListRef list, MxIteratorCallback callback, void *state);
 
-/// Append a map of the given list to a new list, the contents of the mapoped list will be the elements
+/// Append a map of the given list to a new list, the contents of the mapped list will be the elements
 /// of the given list that satisfy the predicate defined by 'callback'
 MxStatus MxListMap(MxListRef list, MxIteratorCallback callback, void *state, MxListRef result);
 
