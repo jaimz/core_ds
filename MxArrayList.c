@@ -219,6 +219,10 @@ MxStatus MxArrayListInsertAt(MxArrayListRef list, const void *item, int index)
 		return MxStatusIndexOutOfRange;
 	
 	
+  MxStatus result = ExpandIfNeeded(list);
+  if (result != MxStatusOK)
+    return result;
+  
 	void *moveSource = list->items + index;
 	void *moveDest = list->items + (index + 1);
 	size_t moveAmt = (list->count - index) * sizeof(void *);
