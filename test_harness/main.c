@@ -11,14 +11,17 @@
 #include "test_hashtable.h"
 #include "test_buffer.h"
 #include "test_array_list.h"
+#include "test_bintree.h"
 
 int main (int argc, const char * argv[])
 {
 
     //test_list();
-//    test_hashtable();
+    //test_hashtable();
     //test_buffer();
-    test_array_list();
+    //test_array_list();
+    test_bintree();
+    
     return 0;
 }
 

@@ -30,6 +30,19 @@ int MxDefaultCompareFunction(const void *first, const void *second) {
 	return 1;
 }
 
+int MxDefaultCompareIntFunction(const void *first, const void *second) {
+    int f = *((int *)first);
+    int s = *((int *)second);
+    
+    if (f == s)
+        return 0;
+    
+    if (f < s)
+        return -1;
+    
+    return 1;
+}
+
 
 
 int MxDefaultCStrCompareFunction(const void *first, const void *second)

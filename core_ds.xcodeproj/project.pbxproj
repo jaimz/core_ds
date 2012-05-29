@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A05959A147BA0D500B472E5 /* MxHeap.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A059599147BA0D500B472E5 /* MxHeap.h */; };
+		1A05959D147FCE9A00B472E5 /* MxHeap.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A05959C147FCE9A00B472E5 /* MxHeap.c */; };
 		1A31C5B913ED69F7006D9BAE /* MxFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5B813ED69F7006D9BAE /* MxFunctions.h */; };
 		1A31C5BB13ED6C6A006D9BAE /* MxFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */; };
 		1A31C5BD13ED7122006D9BAE /* MxDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A31C5BC13ED7122006D9BAE /* MxDebug.h */; };
@@ -31,6 +33,8 @@
 		1A31C63613F45DF2006D9BAE /* test_hashtable.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C63513F45DF2006D9BAE /* test_hashtable.c */; };
 		1A31C63913F47931006D9BAE /* test_buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C63813F47930006D9BAE /* test_buffer.c */; };
 		1A31C63C13F485EE006D9BAE /* test_array_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C63B13F485EE006D9BAE /* test_array_list.c */; };
+		1A31C64013F552B4006D9BAE /* test_bintree.c in Sources */ = {isa = PBXBuildFile; fileRef = 1A31C63F13F552B3006D9BAE /* test_bintree.c */; };
+		1AF8E66A14B359DF007ECEC4 /* MxTrie.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AF8E66914B359DF007ECEC4 /* MxTrie.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A059599147BA0D500B472E5 /* MxHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxHeap.h; sourceTree = "<group>"; };
+		1A05959C147FCE9A00B472E5 /* MxHeap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxHeap.c; sourceTree = "<group>"; };
 		1A31C5B113ED6807006D9BAE /* libcore_ds.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libcore_ds.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A31C5B813ED69F7006D9BAE /* MxFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxFunctions.h; sourceTree = "<group>"; };
 		1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MxFunctions.c; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 		1A31C63A13F48203006D9BAE /* test_array_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_array_list.h; sourceTree = "<group>"; };
 		1A31C63B13F485EE006D9BAE /* test_array_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_array_list.c; sourceTree = "<group>"; };
 		1A31C63D13F48D87006D9BAE /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		1A31C63E13F55285006D9BAE /* test_bintree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_bintree.h; sourceTree = "<group>"; };
+		1A31C63F13F552B3006D9BAE /* test_bintree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_bintree.c; sourceTree = "<group>"; };
+		1AF8E66914B359DF007ECEC4 /* MxTrie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MxTrie.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				1A31C5D613F1E678006D9BAE /* Readme.txt */,
+				1A059599147BA0D500B472E5 /* MxHeap.h */,
+				1A05959C147FCE9A00B472E5 /* MxHeap.c */,
+				1AF8E66914B359DF007ECEC4 /* MxTrie.h */,
 				1A31C5B813ED69F7006D9BAE /* MxFunctions.h */,
 				1A31C5BA13ED6C6A006D9BAE /* MxFunctions.c */,
 				1A31C5BC13ED7122006D9BAE /* MxDebug.h */,
@@ -148,6 +160,8 @@
 			children = (
 				1A31C62B13F40143006D9BAE /* utils.c */,
 				1A31C63D13F48D87006D9BAE /* utils.h */,
+				1A31C63E13F55285006D9BAE /* test_bintree.h */,
+				1A31C63F13F552B3006D9BAE /* test_bintree.c */,
 				1A31C63113F402E5006D9BAE /* main.c */,
 				1A31C63A13F48203006D9BAE /* test_array_list.h */,
 				1A31C63B13F485EE006D9BAE /* test_array_list.c */,
@@ -177,6 +191,8 @@
 				1A31C5CF13F08452006D9BAE /* MxStringBuffer.h in Headers */,
 				1A31C5D313F1E001006D9BAE /* MxArrayList.h in Headers */,
 				1A31C5D813F32E51006D9BAE /* MxBinaryTree.h in Headers */,
+				1A05959A147BA0D500B472E5 /* MxHeap.h in Headers */,
+				1AF8E66A14B359DF007ECEC4 /* MxTrie.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +270,7 @@
 				1A31C5D113F1B89E006D9BAE /* MxStringBuffer.c in Sources */,
 				1A31C5D513F1E071006D9BAE /* MxArrayList.c in Sources */,
 				1A31C5DD13F32F35006D9BAE /* MxBinaryTree.c in Sources */,
+				1A05959D147FCE9A00B472E5 /* MxHeap.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +284,7 @@
 				1A31C63613F45DF2006D9BAE /* test_hashtable.c in Sources */,
 				1A31C63913F47931006D9BAE /* test_buffer.c in Sources */,
 				1A31C63C13F485EE006D9BAE /* test_array_list.c in Sources */,
+				1A31C64013F552B4006D9BAE /* test_bintree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +402,7 @@
 				1A31C62813F400E5006D9BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

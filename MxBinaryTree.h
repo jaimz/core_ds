@@ -41,11 +41,13 @@ MxStatus MxBinaryTreeInsert(MxBinaryTreeRef tree, void *item);
 MxStatus MxBinaryTreeRemove(MxBinaryTreeRef tree, void *item, void **oldItem);
 MxStatus MxBinaryTreeFind(MxBinaryTreeRef tree, void *item, void **resultItem);
 
+int MxBinaryTreeCount(MxBinaryTreeRef tree);
 int MxBinaryTreeDepth(MxBinaryTreeRef tree);
 
 MxStatus MxBinaryTreeWalkInOrder(MxBinaryTreeRef tree, MxIteratorCallback callback, void *state);
 MxStatus MxBinaryTreeWalkPreOrder(MxBinaryTreeRef tree, MxIteratorCallback callback, void *state);
 MxStatus MxBinaryTreeWalkPostOrder(MxBinaryTreeRef tree, MxIteratorCallback callback, void *state);
+MxStatus MxBinaryTreeWalkBreadthFirst(MxBinaryTreeRef tree, MxIteratorCallback callback, void *state);
 
 
 MxStatus MxBinaryTreeWipe(MxBinaryTreeRef tree);

@@ -13,9 +13,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "362"
-         endingLineNumber = "362"
-         landmarkName = "MxArrayListIterateBackward()"
-         landmarkType = "7">
+         endingLineNumber = "362">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -23,11 +21,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "test_harness/main.c"
-         timestampString = "334792338.103613"
+         timestampString = "334844868.997421"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "22"
-         endingLineNumber = "22"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
          landmarkName = "main()"
          landmarkType = "7">
       </FileBreakpoint>
@@ -99,6 +97,20 @@
          startingLineNumber = "212"
          endingLineNumber = "212"
          landmarkName = "BucketForKey()"
+         landmarkType = "7">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "MxBinaryTree.c"
+         timestampString = "334846337.673995"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "245"
+         endingLineNumber = "245"
+         landmarkName = "MxBinaryTreeInsert()"
          landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>

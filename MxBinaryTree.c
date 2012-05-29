@@ -11,6 +11,7 @@
 #include "MxDebug.h"
 #include "MxBinaryTree.h"
 #include "MxFunctions.h"
+#include "MxList.h"
 
 static MxBinaryTreeNodeRef CreateNode(void *data);
 static MxBinaryTreeNodeRef FindParentFor(MxBinaryTreeNodeRef node, void *data, MxCompareFunction compare);
@@ -105,7 +106,7 @@ static MxStatus FindInsertionPointFor(MxBinaryTreeNodeRef root, void *data, MxCo
 	while (status == MxStatusIncomplete)
 	{
 		cmp = compare(curr->data, data);
-		MxDebug("Compare result (%s, %s): %d\n", (char *)data, (char *)curr->data, cmp);
+		//MxDebug("Compare result (%s, %s): %d\n", (char *)data, (char *)curr->data, cmp);
 		if (cmp == 0)
 		{
 			// The data is already in the tree - return the current node for the data
@@ -221,6 +222,7 @@ MxStatus MxBinaryTreeInsert(MxBinaryTreeRef tree, void *item)
 	if (tree->root == NULL)
 	{
 		tree->root = node;
+        tree->count += 1;
 		return MxStatusOK;
 	}
 	
@@ -242,12 +244,15 @@ MxStatus MxBinaryTreeInsert(MxBinaryTreeRef tree, void *item)
 	}
 	
 	int cmp = tree->itemCompare(item, parent->data);
-	if (cmp < 0)
+	if (cmp < 0) {
 		parent->left = node;
-	else if (cmp > 0)
+        tree->count += 1;
+	} else if (cmp > 0) {
 		parent->right = node;
-	else
+        tree->count += 1;
+	} else {
 		; // item already in tree...
+    }
 	
 	
 	return MxStatusOK;
@@ -364,6 +369,40 @@ MxStatus WalkNodePostOrder(MxBinaryTreeNodeRef node, MxIteratorCallback callback
 	return status;
 }
 
+
+MxStatus MxBinaryTreeWalkBreadthFirst(MxBinaryTreeRef tree, MxIteratorCallback callback, void *state)
+{
+    if (tree == NULL || callback == NULL)
+        return MxStatusNullArgument;
+    
+    MxList queue;
+    MxListRef queueRef = (MxListRef)(&queue);
+
+    MxStatusCheck(MxListInit(queueRef));
+    MxStatusCheck(MxListAppend(queueRef, tree->root));
+    int count = 1;
+    
+    MxBinaryTreeNodeRef curr;
+    while (count > 0) {
+        MxStatusCheck(MxListPop(queueRef, (void **)(&curr)));
+        if (curr->left != NULL) {
+            MxStatusCheck(MxListPush(queueRef, curr->left));
+        }
+        
+        if (curr->right != NULL) {
+            MxStatusCheck(MxListPush(queueRef, curr->right));
+        }
+        
+        MxStatusCheck(callback(curr, state));
+    }
+   
+    
+    
+    return MxStatusOK;
+}
+
+ 
+
 static void CountDepth(MxBinaryTreeNodeRef node, int level, int *depthCount)
 {
 	if (level > *depthCount)
@@ -376,6 +415,13 @@ static void CountDepth(MxBinaryTreeNodeRef node, int level, int *depthCount)
 		CountDepth(node->right, level+1, depthCount);
 }
 
+int MxBinaryTreeCount(MxBinaryTreeRef tree)
+{
+    if (tree == NULL)
+        return 0;
+
+    return tree->count;
+}
 
 int MxBinaryTreeDepth(MxBinaryTreeRef tree)
 {

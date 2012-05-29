@@ -40,6 +40,8 @@ void MxDefaultFreeFunction(void *data);
 int MxDefaultCompareFunction(const void *first, const void *second);
 int MxDefaultEqualsFunction(const void *first, const void *second);
 
+int MxDefaultCompareIntFunction(const void *first, const void *second);
+
 int MxDefaultCStrEqualsFunction(const void *first, const void *second);
 int MxDefaultCStrCompareFunction(const void *fist, const void *second);
 

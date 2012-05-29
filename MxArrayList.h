@@ -60,9 +60,10 @@ MxStatus MxArrayListIterate(MxArrayListRef list, MxIteratorCallback callback, vo
 MxStatus MxArrayListIterateBackward(MxArrayListRef list, MxIteratorCallback, void *state);
 
 
-
 size_t MxArrayListGetCount(MxArrayListRef list);
 int MxArrayListIndexOf(MxArrayListRef list, void *item);
+
+
 
 
 #endif

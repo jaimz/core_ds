@@ -9,6 +9,6 @@
 #ifndef core_ds_test_bintree_h
 #define core_ds_test_bintree_h
 
-
+void test_bintree(void);
 
 #endif
